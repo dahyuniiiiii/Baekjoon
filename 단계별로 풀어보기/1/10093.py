@@ -1,25 +1,13 @@
-a, b = map(int, input().split())
-# 두 수의 범위 사이에 있는 숫자를 모두 출력하기 위해 min과 max를 사용
-if a < b:
-    start, end = a + 1, b
+a,b = map(int, input().split())
+
+if a == b:
+    print(0) #두 숫자 사이에 존재하는 숫자의 개수가 0이라는 의미
 else:
-    start, end = b + 1, a
+    
+    start = min(a, b) + 1
+    end = max(a, b)
 
-# 두 수 사이의 숫자 개수 출력
-count = end - start
-print(count)
+    print(end - start)
 
-# 두 수 사이의 숫자를 오름차순으로 출력
-if count > 0:
     for i in range(start, end):
         print(i, end=' ')
-    print()
-else:
-    print()
-
-
-
-
-
-
-
